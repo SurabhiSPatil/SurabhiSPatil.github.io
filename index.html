@@ -3,487 +3,300 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Surabhi Patil — Quality Engineering, Analysis & AI Tooling</title>
-<meta name="description" content="Senior Software Engineer in Test with a track record spanning requirements analysis, test architecture, and AI-enabled tooling — open to SDET, SWE, Business Analyst, and Product Analyst roles.">
+<title>Surabhi Patil — Quality Strategy, Systems &amp; AI-Enabled QE</title>
+<meta name="description" content="8 years driving quality strategy, process design, and AI-enabled tooling adoption across engineering organizations — from individual test scenarios to org-wide standards.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=IBM+Plex+Mono:wght@500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root {
-    --ink: #12181F;
-    --ink-soft: #3C4652;
-    --paper: #F7F8FA;
-    --paper-raised: #FFFFFF;
-    --signal: #2F7A5C;
-    --signal-dim: #E4EFEA;
-    --line: #D8DEE4;
-    --rust: #B4532A;
-    --mono: 'IBM Plex Mono', ui-monospace, monospace;
-    --serif: 'Fraunces', Georgia, serif;
+    --paper: #FAFAF9;
+    --ink: #1D1D1F;
+    --slate: #5B6B73;
+    --line: #DADDE0;
+    --accent: #3A5A78;
+    --accent-tint: #EAF0F4;
+    --serif: 'Source Serif 4', Georgia, serif;
     --sans: 'Inter', -apple-system, sans-serif;
+    --mono: 'IBM Plex Mono', ui-monospace, monospace;
   }
-
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-
+  * { margin:0; padding:0; box-sizing:border-box; }
   html { scroll-behavior: smooth; }
-
-  body {
-    background: var(--paper);
-    color: var(--ink);
-    font-family: var(--sans);
-    line-height: 1.55;
-    -webkit-font-smoothing: antialiased;
-  }
-
+  body { background:var(--paper); color:var(--ink); font-family:var(--sans); line-height:1.6; -webkit-font-smoothing:antialiased; }
   a { color: inherit; }
-  a:focus-visible, button:focus-visible { outline: 2px solid var(--signal); outline-offset: 3px; }
+  a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 
-  .wrap {
-    max-width: 880px;
-    margin: 0 auto;
-    padding: 0 28px;
-  }
+  .wrap { max-width: 760px; margin:0 auto; padding: 0 32px; }
 
-  /* ---- Header / status strip ---- */
-  .statusbar {
-    border-bottom: 1px solid var(--line);
-    background: var(--paper-raised);
-  }
-  .statusbar-inner {
-    max-width: 880px;
-    margin: 0 auto;
-    padding: 14px 28px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-family: var(--mono);
-    font-size: 12px;
-    color: var(--ink-soft);
-    letter-spacing: 0.02em;
-  }
-  .statusbar-inner .dot {
-    display: inline-block;
-    width: 7px; height: 7px;
-    border-radius: 50%;
-    background: var(--signal);
-    margin-right: 7px;
-    box-shadow: 0 0 0 3px var(--signal-dim);
-  }
+  header.hero { padding: 90px 0 70px; }
+  .kicker { font-family: var(--mono); font-size: 12px; color: var(--accent); letter-spacing: 0.03em; margin-bottom: 22px; }
+  h1 { font-family: var(--serif); font-weight: 500; font-size: clamp(32px, 5vw, 48px); line-height: 1.2; letter-spacing: -0.01em; max-width: 17ch; color: var(--ink); margin-bottom: 24px; }
+  .hero-sub { font-size: 17px; color: var(--slate); max-width: 58ch; margin-bottom: 30px; }
+  .hero-links { display:flex; flex-wrap: wrap; gap: 10px 22px; font-size: 14px; }
+  .hero-links a { color: var(--accent); text-decoration:none; border-bottom: 1px solid transparent; }
+  .hero-links a:hover { border-color: var(--accent); }
+  .hero-links span.loc { color: var(--slate); }
 
-  header.hero {
-    padding: 72px 0 56px;
-    border-bottom: 1px solid var(--line);
-  }
-  .eyebrow {
-    font-family: var(--mono);
-    font-size: 13px;
-    color: var(--signal);
-    letter-spacing: 0.04em;
-    margin-bottom: 18px;
-  }
-  h1 {
-    font-family: var(--serif);
-    font-weight: 500;
-    font-size: clamp(38px, 6vw, 58px);
-    line-height: 1.05;
-    letter-spacing: -0.01em;
-    margin-bottom: 18px;
-  }
-  h1 em {
-    font-style: italic;
-    color: var(--signal);
-  }
-  .hero-sub {
-    font-size: 18px;
-    color: var(--ink-soft);
-    max-width: 62ch;
-    margin-bottom: 28px;
-  }
-  .hero-meta {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px 22px;
-    font-family: var(--mono);
-    font-size: 13px;
-    color: var(--ink-soft);
-  }
-  .hero-meta a { text-decoration: none; border-bottom: 1px solid var(--line); }
-  .hero-meta a:hover { border-color: var(--signal); color: var(--signal); }
+  /* ---- layer sections ---- */
+  .layers { padding-bottom: 20px; }
+  .layer { display:flex; gap: 28px; padding: 46px 0; border-top: 1px solid var(--line); position: relative; }
+  .layer:first-child { border-top: 2px solid var(--ink); }
 
-  /* ---- Section labels ---- */
-  .section { padding: 56px 0; border-bottom: 1px solid var(--line); }
-  .section:last-of-type { border-bottom: none; }
-  .section-label {
-    font-family: var(--mono);
-    font-size: 12px;
-    color: var(--ink-soft);
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 30px;
-  }
-  .section-label::after {
-    content: "";
-    flex: 1;
-    height: 1px;
-    background: var(--line);
-  }
+  .layer-marker { flex: 0 0 64px; }
+  .layer-code { font-family: var(--mono); font-size: 12px; color: var(--accent); background: var(--accent-tint); display:inline-block; padding: 3px 8px; border-radius: 2px; }
 
-  /* ---- Project cards ---- */
-  .project {
-    background: var(--paper-raised);
-    border: 1px solid var(--line);
-    border-radius: 4px;
-    padding: 32px;
-    margin-bottom: 20px;
-  }
-  .project-head {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    flex-wrap: wrap;
-    gap: 8px 20px;
-    margin-bottom: 14px;
-  }
-  .project-title {
-    font-family: var(--serif);
-    font-size: 24px;
-    font-weight: 500;
-  }
-  .project-tag {
-    font-family: var(--mono);
-    font-size: 12px;
-    color: var(--signal);
-    background: var(--signal-dim);
-    padding: 3px 9px;
-    border-radius: 3px;
-    white-space: nowrap;
-  }
-  .project-desc {
-    color: var(--ink-soft);
-    margin-bottom: 20px;
-    max-width: 68ch;
-  }
-  .statusline {
-    font-family: var(--mono);
-    font-size: 12.5px;
-    color: var(--ink-soft);
-    background: var(--paper);
-    border: 1px solid var(--line);
-    border-radius: 3px;
-    padding: 10px 14px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px 18px;
-    margin-bottom: 20px;
-  }
-  .statusline .ok { color: var(--signal); font-weight: 600; }
+  .layer-body { flex: 1; min-width: 0; }
+  .layer-name { font-family: var(--serif); font-size: 22px; font-weight: 500; margin-bottom: 6px; color: var(--ink); }
+  .layer-role { font-size: 14px; color: var(--slate); margin-bottom: 26px; max-width: 54ch; }
 
-  .detail-list {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-  .detail-list li {
-    padding-left: 20px;
-    position: relative;
-    font-size: 15px;
-    color: var(--ink-soft);
-  }
-  .detail-list li::before {
-    content: "→";
-    position: absolute;
-    left: 0;
-    color: var(--signal);
-    font-size: 13px;
-  }
-  .detail-list strong { color: var(--ink); font-weight: 600; }
+  .entry { padding: 18px 0; border-top: 1px solid var(--line); }
+  .entry:first-of-type { border-top: none; padding-top: 0; }
+  .entry-head { display:flex; justify-content: space-between; align-items:baseline; gap: 16px; margin-bottom: 6px; flex-wrap: wrap; }
+  .entry-title { font-weight: 600; font-size: 15.5px; }
+  .entry-metric { font-family: var(--mono); font-size: 12.5px; color: var(--accent); white-space:nowrap; }
+  .entry-desc { font-size: 14.5px; color: var(--slate); max-width: 58ch; }
+  .entry-desc + .entry-desc { margin-top: 6px; }
+  .entry-links { margin-top: 8px; display:flex; gap: 16px; }
+  .entry-links a { font-family: var(--mono); font-size: 12px; color: var(--accent); text-decoration:none; border-bottom: 1px solid var(--accent-tint); }
+  .entry-links a:hover { border-color: var(--accent); }
 
-  /* ---- Stat row ---- */
-  .stats {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-    gap: 1px;
-    background: var(--line);
-    border: 1px solid var(--line);
-    border-radius: 4px;
-    overflow: hidden;
-    margin-bottom: 20px;
-  }
-  .stat {
-    background: var(--paper-raised);
-    padding: 22px 20px;
-  }
-  .stat-num {
-    font-family: var(--serif);
-    font-size: 34px;
-    font-weight: 500;
-    color: var(--signal);
-    line-height: 1;
-    margin-bottom: 6px;
-  }
-  .stat-label {
-    font-family: var(--mono);
-    font-size: 11.5px;
-    color: var(--ink-soft);
-    text-transform: uppercase;
-    letter-spacing: 0.03em;
-  }
-
-  /* ---- Experience / skills ---- */
-  .exp-row {
-    display: flex;
-    gap: 24px;
-    padding: 18px 0;
-    border-bottom: 1px solid var(--line);
-  }
-  .exp-row:last-child { border-bottom: none; }
-  .exp-when {
-    font-family: var(--mono);
-    font-size: 12.5px;
-    color: var(--ink-soft);
-    width: 130px;
-    flex-shrink: 0;
-    padding-top: 3px;
-  }
-  .exp-what strong { display: block; font-size: 16px; margin-bottom: 4px; }
-  .exp-what span { color: var(--ink-soft); font-size: 14.5px; }
-
+  /* ---- foundation layer: skills ---- */
   .skill-groups {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 24px;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 22px 28px;
   }
   .skill-group-label {
     font-family: var(--mono);
     font-size: 11.5px;
-    color: var(--signal);
+    color: var(--accent);
     text-transform: uppercase;
-    letter-spacing: 0.04em;
+    letter-spacing: 0.03em;
     margin-bottom: 10px;
   }
   .skill-tags { display: flex; flex-wrap: wrap; gap: 7px; }
   .skill-tag {
     font-family: var(--mono);
     font-size: 12.5px;
-    background: var(--paper-raised);
+    background: #fff;
     border: 1px solid var(--line);
     padding: 4px 10px;
     border-radius: 3px;
-    color: var(--ink-soft);
+    color: var(--slate);
   }
+  .skill-note { font-size: 13px; color: var(--slate); margin-top: 18px; max-width: 58ch; }
 
-  footer {
-    padding: 44px 0 60px;
-    text-align: center;
-  }
-  footer p {
-    font-family: var(--mono);
-    font-size: 12.5px;
-    color: var(--ink-soft);
-  }
-  footer a { color: var(--signal); text-decoration: none; border-bottom: 1px solid var(--signal-dim); }
+  /* ---- experience row ---- */
+  .exp-row { display: flex; gap: 24px; padding: 16px 0; border-top: 1px solid var(--line); }
+  .exp-row:first-child { border-top: none; padding-top: 0; }
+  .exp-when { font-family: var(--mono); font-size: 12.5px; color: var(--slate); width: 130px; flex-shrink: 0; padding-top: 3px; }
+  .exp-what strong { display: block; font-size: 16px; margin-bottom: 4px; }
+  .exp-what span { color: var(--slate); font-size: 14.5px; }
+
+  footer { padding: 44px 0 80px; border-top: 1px solid var(--line); text-align: left; }
+  footer p { font-size: 13px; color: var(--slate); }
+  footer a { color: var(--accent); text-decoration:none; border-bottom: 1px solid var(--accent-tint); }
 
   @media (max-width: 640px) {
+    .layer { flex-direction: column; gap: 12px; }
+    .layer-marker { flex: none; }
     .exp-row { flex-direction: column; gap: 4px; }
     .exp-when { width: auto; }
-    .project { padding: 24px 20px; }
-    h1 { font-size: 34px; }
-    .statusbar-inner { flex-direction: column; align-items: flex-start; gap: 4px; }
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    html { scroll-behavior: auto; }
+    h1 { font-size: 30px; }
   }
 </style>
 </head>
 <body>
 
-  <div class="statusbar">
-    <div class="statusbar-inner">
-      <span><span class="dot"></span>available · open to relocation (EU sponsorship)</span>
-      <span>updated 2026</span>
-    </div>
-  </div>
-
   <div class="wrap">
     <header class="hero">
-      <div class="eyebrow">// requirements → systems → quality</div>
-      <h1>Surabhi Patil turns<br>ambiguous requirements<br>into things that <em>work.</em></h1>
-      <p class="hero-sub">7+ years at MathWorks translating business and stakeholder requirements into test strategy, system logic, and increasingly, AI-native tooling — open to Business Analyst, Product Analyst, SDET, and SWE roles.</p>
-      <div class="hero-meta">
-        <span>Boston, MA → relocating to EU</span>
+      <div class="kicker">quality strategy — systems — leadership</div>
+      <h1>Surabhi Patil builds the systems that decide what quality means at scale.</h1>
+      <p class="hero-sub">8 years driving quality strategy, process design, and AI-enabled tooling adoption across engineering organizations — from individual test scenarios to org-wide standards.</p>
+      <div class="hero-links">
+        <span class="loc">Boston, MA</span>
         <a href="mailto:srbhipatil@gmail.com">srbhipatil@gmail.com</a>
         <a href="https://linkedin.com/in/surabhi-patil" target="_blank" rel="noopener">linkedin.com/in/surabhi-patil</a>
         <a href="https://github.com/SurabhiSPatil" target="_blank" rel="noopener">github.com/SurabhiSPatil</a>
       </div>
     </header>
 
-    <section class="section" id="work">
-      <div class="section-label">Selected work</div>
+    <section class="layers">
 
-      <div class="project">
-        <div class="project-head">
-          <span class="project-title">Agentic QE Workflow</span>
-          <span class="project-tag">shipped · org-wide demo</span>
-        </div>
-        <p class="project-desc">Solo-designed and shipped an AI agent that automates test scenario generation and documentation by connecting directly to a team's issue tracker, wiki, and domain knowledge base — deployed on a department-wide legacy web service retirement.</p>
-        <div class="statusline">
-          <span><span class="ok">✓</span> 7-person delivery team</span>
-          <span><span class="ok">✓</span> 1.5 days → 2–3 hrs per story</span>
-          <span><span class="ok">✓</span> demoed org-wide</span>
-        </div>
-        <ul class="detail-list">
-          <li>Reduced QE cycle time per story by <strong>80%</strong> by automating the requirements-to-test-scenario translation step that previously consumed most of a QE's time on each ticket.</li>
-          <li>Built as a reusable workflow, not a one-off script — designed for other teams to adopt with their own knowledge sources.</li>
-        </ul>
-      </div>
+      <!-- LAYER 01 — STRATEGY & LEADERSHIP -->
+      <div class="layer" id="leadership">
+        <div class="layer-marker"><span class="layer-code">L01</span></div>
+        <div class="layer-body">
+          <div class="layer-name">Strategy &amp; Leadership</div>
+          <div class="layer-role">Setting direction and driving adoption across teams that don't report to her.</div>
 
-      <div class="project">
-        <div class="project-head">
-          <span class="project-title">Licensing Rules Agent</span>
-          <span class="project-tag">shipped · service-backed</span>
-        </div>
-        <p class="project-desc">A read-only conversational assistant that lets licensing support and sales teams ask plain-English questions against live product and licensing configuration — no more manually tracing dependency chains by hand.</p>
-        <div class="statusline">
-          <span><span class="ok">✓</span> service-backed, not static docs</span>
-          <span><span class="ok">✓</span> dependency & compatibility reasoning</span>
-          <span><span class="ok">✓</span> built for non-technical stakeholders</span>
-        </div>
-        <ul class="detail-list">
-          <li>Evaluates product dependency chains, compatibility rules, and quantity constraints, then explains violations in plain language instead of raw error codes.</li>
-          <li>Architected around tool contracts mapped to real backend services, so answers are grounded in live data rather than documentation that goes stale.</li>
-          <li>Documented production-readiness considerations up front — auth, session context, PII handling, logging, support ownership — before a single line of integration code.</li>
-        </ul>
-      </div>
-
-      <div class="project">
-        <div class="project-head">
-          <span class="project-title">Sprint Health Agent</span>
-          <span class="project-tag">shipped · reusable plugin</span>
-        </div>
-        <p class="project-desc">A purpose-locked AI tool that turns sprint data and retro notes into a deterministic sprint-health report — planned vs. reactive load, per-person capacity, recurring retro themes, and a data-backed commitment recommendation for the next sprint.</p>
-        <div class="statusline">
-          <span><span class="ok">✓</span> multi-sprint ingestion</span>
-          <span><span class="ok">✓</span> deterministic, not generative guesswork</span>
-          <span><span class="ok">✓</span> packaged for reuse across teams</span>
-        </div>
-        <ul class="detail-list">
-          <li>Deterministic scripts handle the data — the chat layer is only for interacting with results, so numbers are never hallucinated.</li>
-          <li>Includes a QE coverage spotlight so validation surface area is visible separately from raw story-point ownership.</li>
-        </ul>
-      </div>
-
-      <div class="project">
-        <div class="project-head">
-          <span class="project-title">Upgrade Coverage Validator</span>
-          <span class="project-tag">shipped · team-wide rollout</span>
-        </div>
-        <p class="project-desc">A tool that checks whether a project's fail-fast tests actually cover the changes in a Spring Boot patch release, before anyone trusts fast feedback over full regression.</p>
-        <div class="statusline">
-          <span><span class="ok">✓</span> filters noise from real risk</span>
-          <span><span class="ok">✓</span> enforces 80% coverage floor</span>
-          <span><span class="ok">✓</span> rolled out team-wide</span>
-        </div>
-        <ul class="detail-list">
-          <li>Compares Spring Boot release notes against a project's actual dependencies, discarding changes that don't apply.</li>
-          <li>Flags both change-specific gaps and overall class-level coverage health, with a clear per-project pass/fail verdict.</li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="section" id="impact">
-      <div class="section-label">By the numbers</div>
-      <div class="stats">
-        <div class="stat"><div class="stat-num">80%</div><div class="stat-label">QE cycle time cut</div></div>
-        <div class="stat"><div class="stat-num">12×</div><div class="stat-label">regression time saved</div></div>
-        <div class="stat"><div class="stat-num">98%</div><div class="stat-label">regression pass rate</div></div>
-        <div class="stat"><div class="stat-num">7+</div><div class="stat-label">years in QE</div></div>
-      </div>
-    </section>
-
-    <section class="section" id="experience">
-      <div class="section-label">Experience</div>
-      <div class="exp-row">
-        <div class="exp-when">2019 — present</div>
-        <div class="exp-what">
-          <strong>Senior Software Engineer in Test — MathWorks</strong>
-          <span>Test architecture, CI/CD reliability, and AI-enabled QE tooling across enterprise licensing platforms. Owns quality strategy end-to-end: scenario design, automation, release qualification, and cross-team stakeholder alignment.</span>
-        </div>
-      </div>
-      <div class="exp-row">
-        <div class="exp-when">2016 — 2018</div>
-        <div class="exp-what">
-          <strong>M.S., Information Systems — Northeastern University</strong>
-          <span>Boston, MA</span>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="skills">
-      <div class="section-label">Toolset</div>
-      <div class="skill-groups">
-        <div class="skill-group">
-          <div class="skill-group-label">Languages</div>
-          <div class="skill-tags">
-            <span class="skill-tag">Java</span>
-            <span class="skill-tag">Python</span>
-            <span class="skill-tag">JavaScript</span>
-            <span class="skill-tag">TypeScript</span>
+          <div class="entry">
+            <div class="entry-head">
+              <span class="entry-title">Micro Bashes — quality process, created &amp; rolled out</span>
+              <span class="entry-metric">−98% production bugs</span>
+            </div>
+            <div class="entry-desc">Designed a recurring per-sprint bug-bash process for UI feature development, adopted team-wide as standard practice; also led feature bashes ahead of release.</div>
           </div>
-        </div>
-        <div class="skill-group">
-          <div class="skill-group-label">Testing</div>
-          <div class="skill-tags">
-            <span class="skill-tag">Cypress</span>
-            <span class="skill-tag">Selenium</span>
-            <span class="skill-tag">JUnit5</span>
-            <span class="skill-tag">Spring REST Client</span>
+
+          <div class="entry">
+            <div class="entry-head">
+              <span class="entry-title">Cross-department E2E testing leadership</span>
+              <span class="entry-metric">~10 QEs, multi-team</span>
+            </div>
+            <div class="entry-desc">Led end-to-end testing rounds coordinating QEs from outside her own department ahead of major releases.</div>
           </div>
-        </div>
-        <div class="skill-group">
-          <div class="skill-group-label">Frameworks</div>
-          <div class="skill-tags">
-            <span class="skill-tag">React</span>
-            <span class="skill-tag">Next.js</span>
-            <span class="skill-tag">Spring Boot</span>
-            <span class="skill-tag">Hibernate</span>
+
+          <div class="entry">
+            <div class="entry-head">
+              <span class="entry-title">Agentic QE Workflow — adoption, informally led</span>
+              <span class="entry-metric">7 engineers · −80% cycle time</span>
+            </div>
+            <div class="entry-desc">Took the lead on rollout of an AI-driven QE workflow across the delivery team, driving adoption end to end without a formal leadership title.</div>
           </div>
-        </div>
-        <div class="skill-group">
-          <div class="skill-group-label">AI tooling</div>
-          <div class="skill-tags">
-            <span class="skill-tag">Claude Code</span>
-            <span class="skill-tag">Codex</span>
-            <span class="skill-tag">Gemini</span>
-          </div>
-        </div>
-        <div class="skill-group">
-          <div class="skill-group-label">Infra</div>
-          <div class="skill-tags">
-            <span class="skill-tag">AWS</span>
-            <span class="skill-tag">Docker</span>
-            <span class="skill-tag">Git</span>
-            <span class="skill-tag">GitLab CI</span>
-          </div>
-        </div>
-        <div class="skill-group">
-          <div class="skill-group-label">Data</div>
-          <div class="skill-tags">
-            <span class="skill-tag">MySQL</span>
-            <span class="skill-tag">Solr</span>
-            <span class="skill-tag">RabbitMQ</span>
-            <span class="skill-tag">GraphQL</span>
+
+          <div class="entry">
+            <div class="entry-head">
+              <span class="entry-title">B2C Subscription Model — cross-team initiative</span>
+              <span class="entry-metric">4+ teams · exec visibility</span>
+            </div>
+            <div class="entry-desc">Selected as sole QE representative on a senior-leadership-visible, cross-functional scrum initiative. Also mentored 4–5 new hires and interns, and represented her manager in leadership meetings during absences.</div>
           </div>
         </div>
       </div>
+
+      <!-- LAYER 02 — SYSTEMS & AI TOOLING -->
+      <div class="layer" id="systems">
+        <div class="layer-marker"><span class="layer-code">L02</span></div>
+        <div class="layer-body">
+          <div class="layer-name">Systems &amp; AI Tooling</div>
+          <div class="layer-role">Where strategy becomes shipped, reusable infrastructure — test generation, coverage analysis, and anomaly detection built into the QE lifecycle.</div>
+
+          <div class="entry">
+            <div class="entry-head">
+              <span class="entry-title">Agentic QE Workflow</span>
+              <span class="entry-metric">shipped · org-wide demo</span>
+            </div>
+            <div class="entry-desc">Solo-designed and shipped an AI agent that automates test scenario generation and documentation by connecting to a team's issue tracker, wiki, and domain knowledge base — deployed on a department-wide legacy web service retirement. Built as a reusable workflow other teams can adopt with their own knowledge sources.</div>
+          </div>
+
+          <div class="entry">
+            <div class="entry-head">
+              <span class="entry-title">Licensing Rules Agent</span>
+              <span class="entry-metric">shipped · service-backed</span>
+            </div>
+            <div class="entry-desc">A conversational assistant letting licensing support and sales teams query live product and licensing configuration in plain English — evaluating dependency chains, compatibility rules, and quantity constraints, then explaining violations instead of raw error codes. Architected around tool contracts mapped to real backend services, with production-readiness considerations (auth, session context, PII handling, logging, support ownership) documented up front.</div>
+          </div>
+
+          <div class="entry">
+            <div class="entry-head">
+              <span class="entry-title">Sprint Health Agent</span>
+              <span class="entry-metric">shipped · reusable plugin</span>
+            </div>
+            <div class="entry-desc">A purpose-locked AI tool turning sprint data and retro notes into a deterministic sprint-health report — planned vs. reactive load, per-person capacity, recurring retro themes, and a data-backed commitment recommendation. Deterministic scripts handle the data; the chat layer only interacts with results, so numbers are never hallucinated. Includes a QE coverage spotlight distinct from raw story-point ownership.</div>
+          </div>
+
+          <div class="entry">
+            <div class="entry-head">
+              <span class="entry-title">Upgrade Coverage Validator</span>
+              <span class="entry-metric">shipped · team-wide rollout</span>
+            </div>
+            <div class="entry-desc">Checks whether a project's fail-fast tests actually cover the changes in a Spring Boot patch release before anyone trusts fast feedback over full regression — comparing release notes against actual dependencies, then flagging change-specific and class-level coverage gaps with a clear per-project pass/fail verdict.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- LAYER 03 — FOUNDATION: SKILLS -->
+      <div class="layer" id="foundation">
+        <div class="layer-marker"><span class="layer-code">L03</span></div>
+        <div class="layer-body">
+          <div class="layer-name">Foundation</div>
+          <div class="layer-role">The production-grade skillset the systems above are built on.</div>
+
+          <div class="skill-groups">
+            <div class="skill-group">
+              <div class="skill-group-label">Languages</div>
+              <div class="skill-tags">
+                <span class="skill-tag">Java</span>
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">SQL</span>
+                <span class="skill-tag">JavaScript</span>
+              </div>
+            </div>
+            <div class="skill-group">
+              <div class="skill-group-label">Testing</div>
+              <div class="skill-tags">
+                <span class="skill-tag">Cypress</span>
+                <span class="skill-tag">Selenium</span>
+                <span class="skill-tag">JUnit5</span>
+                <span class="skill-tag">Spring REST Client</span>
+              </div>
+            </div>
+            <div class="skill-group">
+              <div class="skill-group-label">Frameworks</div>
+              <div class="skill-tags">
+                <span class="skill-tag">React</span>
+                <span class="skill-tag">Spring Boot</span>
+                <span class="skill-tag">Hibernate</span>
+              </div>
+            </div>
+            <div class="skill-group">
+              <div class="skill-group-label">AI tooling</div>
+              <div class="skill-tags">
+                <span class="skill-tag">Claude Code</span>
+                <span class="skill-tag">Codex</span>
+                <span class="skill-tag">Gemini</span>
+              </div>
+            </div>
+            <div class="skill-group">
+              <div class="skill-group-label">Infra &amp; CI/CD</div>
+              <div class="skill-tags">
+                <span class="skill-tag">AWS</span>
+                <span class="skill-tag">Git</span>
+                <span class="skill-tag">GitLab CI</span>
+              </div>
+            </div>
+            <div class="skill-group">
+              <div class="skill-group-label">Data</div>
+              <div class="skill-tags">
+                <span class="skill-tag">MySQL</span>
+                <span class="skill-tag">Solr</span>
+                <span class="skill-tag">RabbitMQ</span>
+                <span class="skill-tag">GraphQL</span>
+              </div>
+            </div>
+          </div>
+          <p class="skill-note">Uses CI/CD gates and standards day-to-day; pipeline template is owned by a separate platform team. Python work is AI-assisted app-building rather than hand-coded from scratch.</p>
+        </div>
+      </div>
+
+      <!-- LAYER 04 — EXPERIENCE & EDUCATION -->
+      <div class="layer" id="experience">
+        <div class="layer-marker"><span class="layer-code">L04</span></div>
+        <div class="layer-body">
+          <div class="layer-name">Experience</div>
+          <div class="layer-role">Where all three layers above have played out, in practice.</div>
+
+          <div class="exp-row">
+            <div class="exp-when">2019 — present</div>
+            <div class="exp-what">
+              <strong>Senior Software Engineer in Test — MathWorks</strong>
+              <span>8 years driving test architecture, CI/CD reliability, and AI-enabled QE tooling across enterprise licensing platforms — scenario design, automation, release qualification, and cross-team stakeholder alignment.</span>
+            </div>
+          </div>
+          <div class="exp-row">
+            <div class="exp-when">2016 — 2018</div>
+            <div class="exp-what">
+              <strong>M.S., Information Systems — Northeastern University</strong>
+              <span>Boston, MA</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </section>
 
     <footer>
-      <p>Boston, MA — open to relocation across the EU with sponsorship · <a href="mailto:srbhipatil@gmail.com">get in touch</a></p>
+      <p>Boston, MA · <a href="mailto:srbhipatil@gmail.com">get in touch</a></p>
     </footer>
   </div>
 
