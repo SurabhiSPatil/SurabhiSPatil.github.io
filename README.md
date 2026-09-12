@@ -1,36 +1,33 @@
-# Surabhi Patil — Portfolio
+# Portfolio
 
-A single-page portfolio built around one idea: quality strategy and leadership sit above tooling, which sits above raw skills — the page's layout argues that hierarchy instead of just stating it.
+Single-page portfolio site. Self-contained `index.html`, no build step, no dependencies beyond two Google Fonts (Source Serif 4, Inter) loaded via CDN.
 
-**Live structure**
+## Running locally
 
-| Layer | Contents |
-|---|---|
-| `L01` Strategy & Leadership | Process design, cross-team/cross-department leadership, informal team leadership on AI tooling adoption |
-| `L02` Systems & AI Tooling | Shipped AI-enabled QE projects (test generation, coverage analysis, sprint health reporting) |
-| `L03` Foundation | Core technical skillset — languages, testing, frameworks, infra, data |
-| `L04` Experience | Role history and education |
-
-## Tech
-
-Single self-contained `index.html` — no build step, no dependencies beyond two Google Fonts (Source Serif 4, IBM Plex Mono, Inter) loaded via CDN. Open the file directly in any browser, or serve it as a static site.
+Open `index.html` directly in any browser. No server required.
 
 ## Deploying
 
 **GitHub Pages:** keep the file named `index.html` at the repo root, enable Pages in repo settings (Settings → Pages → Deploy from branch), and it will serve automatically at `https://<username>.github.io/<repo>/`.
 
-**Anywhere else:** the file can be renamed freely and opened locally or hosted on any static file host — nothing inside depends on the filename.
+**Anywhere else:** the file can be renamed freely and opened locally or hosted on any static file host, nothing inside depends on the filename.
 
-## Updating content
+## Editing content
 
-All content lives directly in the HTML — search for the section you want to edit:
-- `id="leadership"` — Layer 01 entries
-- `id="systems"` — Layer 02 project entries
-- `id="foundation"` — Layer 03 skill tags
-- `id="experience"` — Layer 04 role/education rows
+All content lives directly in the HTML. Section anchors used by the nav bar:
+- `id="leadership"` — Strategy and Leadership
+- `id="systems"` — Systems and AI Tooling
+- `id="experience"` — Experience and Education
+- `id="recommendations"` — Recommendations
 
-Each entry follows the same pattern: a title, a right-aligned metric, and a one- to two-sentence description. Keep new entries in that shape to stay visually consistent.
+Open the file in any text editor and search for the section you want to change. Each content block (a leadership highlight, a project entry, a timeline row) follows a repeating HTML pattern; copy an existing block's structure when adding a new entry to stay visually consistent.
+
+## Notes for future edits
+
+- Scroll animations and the sticky highlight panel are driven by vanilla JavaScript at the bottom of the file (IntersectionObserver-based). No external JS libraries.
+- Respects `prefers-reduced-motion`: animations are disabled automatically for users with that OS setting on.
+- Color and spacing values are defined as CSS custom properties (`:root` block at the top of the `<style>` tag); edit those to retheme the whole page at once.
 
 ## Last updated
 
-2026 — reflects 8 years of experience.
+2026.
